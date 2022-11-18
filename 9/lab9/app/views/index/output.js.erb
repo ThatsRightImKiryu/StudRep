@@ -1,0 +1,18 @@
+
+function run(){
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function()
+        {
+            if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+            {
+                result = document.getElementById("result")
+                let div = document.createElement("div")
+                result.innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open('GET', 'http://localhost:3000/index/output?inpt=' + <%=@input%>+'&commit=Отправить', true);
+        xmlhttp.send();
+    
+}
+
+run()
