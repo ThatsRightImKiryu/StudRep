@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Лабораторная работа 1 часть 1</title>
+        <script src="lab4_1.js">
+            
+</script>
+        <style>
+            table,tr,td{
+                border:1px solid black;
+            }
+            td.nice{
+                border:1px solid purple;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <form>
+                <table>
+                    <tr>
+                        <td>Наименование товара</td>
+                        <td><input type="text" id="name"></td>
+                    </tr>
+                    <tr>
+                        <td>Стоимость товара</td>
+                        <td><input type="text" id="price"></td>
+                    </tr>
+                </table>
+            </form>
+            <input type="submit" value="Добавить" onclick=add()>
+            
+        </div>
+
+        <span><br/></span>
+        <div>
+
+            <table id="t">
+                <tr>
+                    <td>Наименование товара</td>
+                    <td>Стоимость товара</td>
+                </tr>
+            </table>
+        </div>
+
+        <span><br/></span>
+        
+        <div >
+            <table>
+                <tr>
+                    <td>
+                        "Стоимость заказа."
+                    </td>
+                </tr>
+                <tr>
+                    <td id="sum">
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Рассчитать стоимость заказа" onclick=sum()>
+        </div>
+    </body>
+</html>

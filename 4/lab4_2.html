@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Лабораторная работа 4 задание 2</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+        <script src="lab4_2.js"></script>
+        <style>
+            table,td,tr{
+                margin-top: auto;
+                padding: 0%;
+                border:1px solid purple;
+                border-collapse: collapse;
+            }
+            p#order{
+                font: bold;
+                font-size: large;
+                color:green;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-6">
+                <div>
+                    <table id="goods">
+                        <tr>
+                            <td>Наименование товара</td>
+                            <td>Стоимость товара</td>
+                        </tr>
+                        <tr onmouseover="change1(this)" onmouseout="change2(this)" onclick="add(this)">
+                            <td >Бетонит клей Блок 25кг 70шт/пал</td>
+                            <td>224</td>
+
+                        </tr>
+                        <tr onmouseover="change1(this)" onmouseout="change2(this)" onclick="add(this)">
+                            <td>Кварц Штукатурка гипсовая серая ручного нанесения 30кг</td>
+                            <td>240</td>
+
+                        </tr >
+                        <tr onmouseover="change1(this)" onmouseout="change2(this)" onclick="add(this)">
+                            <td>Пирамида "Толстяк" стяжка для пола ,  25 кг 50 шт/под</td>
+                            <td>285</td>
+
+                        </tr>
+                        <tr onmouseover="change1(this)" onmouseout="change2(this)" onclick="add(this)">
+                            <td>Киилто затирка  Saumalaasti для швов кафеля 1 кг, какао 33</td>
+                            <td>460</td>
+
+                        </tr>
+                        <tr onmouseover="change1(this)" onmouseout="change2(this)" onclick="add(this)">
+                            <td>Лакра  шпатлевка масл-клеевая  15кг</td>
+                            <td>444</td>
+
+                        </tr>
+                    </table>
+                </div>
+            
+                <div><br/></div>
+                <h2>Заказ</h2>
+                <div >
+                    <table id="list">
+                        <tr>
+                            <td>Наименование товара</td>
+                            <td>Стоимость товара</td>
+                            <td>Количество</td>
+                        </tr>
+                    </table>
+                </div>
+                <script>set()</script>
+            </div>
+        </div>
+    </body>
+</html>

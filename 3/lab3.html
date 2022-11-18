@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Лаба третья</title>
+        <script>
+            
+            function Print(joint) {
+                if (joint.parentNode==document.body){
+                    document.write(joint.nodeName);
+                    console.log(joint.nodeName);
+                    console.log(getLevel(joint));
+                }
+                var child = joint.firstChild;
+                while (child) {
+                    if (child.nodeType == 1) {
+                        var space = "&nbsp;";
+                        document.write("<br/>");
+                        var level = getLevel(child);
+                        console.log(child.nodeName);
+                        console.log(level);
+                        while(level>0){
+                            space+="&nbsp;";
+                            level-=1;
+                        }
+                        document.write(space + child.nodeName);
+                        Print(child);
+                        };
+                    child = child.nextSibling;
+                };
+            };
+            
+            function getLevel(el){
+                let level = 0, current = el;
+                while(current && current!=document.body){
+                    level++;
+                    current = current.parentNode;
+                }
+                return level;
+            }
+            </script>
+        </head>
+    <body>
+    <h2>Разметка</h2>
+<pre id="doc">
+Уровень 1
+<em><u><s>Уровень 4</s></u></em>
+<strong>Уровень 2</strong>
+</pre>
+    <h2>Дерево разметки страницы</h2>
+    <span>
+        <script>Print(document.getElementById("doc"));</script>
+    </span>
+
+    </body>
+</html>

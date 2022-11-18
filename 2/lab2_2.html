@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <title>ICS6 Bootstrap</title>
+        <link
+         href="https://e-learning.bmstu.ru/iu6/pluginfile.php/7546/mod_folder/content/0/bootstrap.min.css?forcedownload=1" rel="stylesheet">
+        <style>
+            html {
+                position: relative;
+                min-height: 100%;
+            }
+            body {
+                margin-bottom: 40px;
+            }
+            main {
+                margin-top: 15px;
+            }
+            footer {
+                height: 40px;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+            .my-primary {
+                background-color: #00ff73;
+                color: rgb(255, 5, 5);
+            }
+
+            td.aligning{
+                text-align: right;
+              
+            }
+            table[id ="bord"],table[id ="bord"] td{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark my-primary">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                
+                    <a class="nav-link" href="https://cat-bounce.com/">Link</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col-4">
+                <img
+                src="https://e-learning.bmstu.ru/iu6/pluginfile.php/7546/mod_folder/content/0/avatar.jpg?forcedownload=1"
+                alt="avatar" width="150" height="150">
+            </div>
+            <div class="col-8">
+                <p>Любой текст</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <h1 class="bg-primary">Регистрация на сайте</h1>
+		<form>
+			<table>
+			
+				<tr><td>Имя: </td><td class="aligning"><input type="text" name="fname"></td></tr>
+				<tr><td>Фамилия: </td> <td><input type="text" name="lname"></td></tr>
+				<tr><td>Пол: </td><td class="aligning"><input type="radio" name="gender" value="м">м
+				<input type="radio" name="gender" value="ж">ж</td></tr>
+				<tr><td><input class="btn btn-success" type="submit" value="Отправить"></td><td></td></tr>
+			
+			</table>
+		</form>
+            </div>
+            <div class="col-4">
+                <table id="bord">
+                    
+                    <tr>
+                        <th class="text-danger">День недели</th>
+                        <th class="text-uppercase">Время</th>
+                        <th class = "text-primary">ЧC</th>
+                        <th class="font-italic">ЗН</th>
+                    </tr>
+            
+                    <tr>
+                        <td rowspan="2">ПН</td>
+                        <td>08:30 - 10:05</td> 
+                        <td colspan="2">(сем) Теория вероятностей и математическая статистика 1035л</td>
+                    </tr>
+                    <tr>
+                        <td>10:15 - 11:50</td> 
+                        <td colspan="2">(лек) Теория вероятностей и математическая статистика 218л Горяинов В. Б.</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td rowspan="5">ВТ</td>
+                        <td>08:30 - 10:05</td> 
+                        <td>(лаб) Языки интернет-программирования каф. ИУ6</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10:15 - 11:50</td> 
+                        <td>(лаб) Языки интернет-программирования каф. ИУ6</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 13:35</td>
+                        <td colspan="2">(лек) Языки интернет-программирования 501ю Самарев Р. С. </td>
+                    </tr>
+                    <tr>
+                        <td>13:50 - 15:25</td>
+                        <td colspan="2">(лек) Базы данных 501ю Фомин М. М. </td>
+                    </tr>
+                        <tr>
+                        <td>15:40 - 17:25</td>
+                        <td></td>
+                        <td>(сем) Базы данных 427ю Фомин М. М.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">СР</td>
+                        <td>8:30 - 10:05</td>
+                        <td colspan="2">(лек) Физика 323</td>
+                    </tr>
+                    <tr>
+                        <td>10:15 - 11:50</td>
+                        <td colspan="2">(лек) Электротехника 520 Скворцов С. П.</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 13:35</td>
+                        <td>(сем) Электротехника 520 Скворцов С. П.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>13:50 - 15:25</td>
+                        <td colspan="2">(сем) Элективный курс по физической культуре и спорту каф. ФВ</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <pre>
+                    <a href="https://stackoverflow.com/">-Чтo</a> <em>мы</em> делаем <em><u>сегодня?</u></em>(1)
+                    -<em><u><mark>Кушоть охота</mark></u></em>, да вот <em>нечем!</em>
+                    -Ну да, <span style="color:red">наверное</span>, <em>ты</em> право*.
+                    -Хех, в <em>лес</em> да <em><u>по драва#</u></em>
+                    -А <em><u>Сёме</u></em> спать не хочется.
+                    -<mark>Спать</mark> - здоровью вредить или как говорят деятели наук: "<var>ax<sup>2</sup></var>+<var>bx</var>+<var>c</var>=0".
+                    -Это же одна из известнейших поговорок. Действительно, <var>D<sub>Кв. ур-я</sub></var>=<var>b<sup>2</sup></var>-4<var>ac</var>
+                    -Главное, <em>аппендицитом</em> не простдиться.
+                    -А для этого нужно хоть немного заниматься <em><u>спортом</u></em>.
+                    -Желеть нужно <em><u><mark>живых</mark></u></em>, не живых не желеть.
+                </pre>
+            </div>
+        </div>
+    </main>
+    <footer class="my-primary">
+        <div class="container">
+            <p class="footer-text">Footer</p>
+        </div>
+    </footer>
+    </body>
+</html>
