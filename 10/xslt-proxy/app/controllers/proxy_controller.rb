@@ -12,14 +12,7 @@ class ProxyController < ApplicationController
                          notice: check(@input)
     end
     api_response = URI.open("http://localhost:3000/?inpt=#{@input}&format=xml")
-    case params[:side]
-    when 'server'
-      @result = xslt_transform(api_response).to_html
-    when 'client-with-xslt'
-      render xml: insert_browser_xslt(api_response).to_xml
-    when 'client'
-      render xml: api_response
-    end
+    where(params[:side], api_response)
   end
 
   def where(side, api_response)

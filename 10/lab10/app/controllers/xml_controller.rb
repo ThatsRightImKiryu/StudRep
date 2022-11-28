@@ -20,7 +20,7 @@ class XmlController < ApplicationController
   # rubocop:enable Naming/MethodParameterName
 
   def compute
-    @input = params[:inpt]
+    @input = params[:inpt].to_i
     check
 
     respond_to do |format|
@@ -30,11 +30,7 @@ class XmlController < ApplicationController
   end
 
   def check
-    if !/^-?\d+$/.match(@input)
-      flash[:notice] = 'Введено не число'
-    elsif !(@input = @input.to_i).positive?
-      flash[:notice] = 'Введено отрицательное число'
-    elsif (@result = twins(@input)).nil?
+    if (@result = twins(@input)).nil?
       @result = { message: "Для n=#{@input} нет близнецов" }
     else
       @result = @result.map { |x1, x2| { first: x1, second: x2 } }
