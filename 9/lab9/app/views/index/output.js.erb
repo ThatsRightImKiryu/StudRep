@@ -1,0 +1,61 @@
+
+
+doc = document.getElementById('result')
+if (doc.innerHTML !="") {doc.innerHTML = "<p id = 'notice'></p>"}
+<% if !flash[:alert].blank? %>
+   
+    document.getElementById("notice").innerHTML ="<%=flash[:alert] %>";
+<%else%>
+    <% if @result.nil? %>
+        p = document.createElement('p')
+        p.innerHTML = 'Для данного n нет близнецов'
+        doc.appendChild(p)
+    <%else%>
+        var table = document.createElement('table')
+        table.setAttribute('id','prime_tab')
+        th = document.createElement('th')
+        th.innerHTML = 'Соседние простые числа'
+        th.setAttribute('colspan','2')
+        table.appendChild(th)
+        th = document.createElement('th')
+        th.innerHTML = 'Разница'
+        table.appendChild(th)
+        doc.appendChild(table)
+
+        <% (@prime_arr.length - 1).times do |i| %>
+            var tr = document.createElement('tr')
+            primes = <%=[@prime_arr[i],@prime_arr[i + 1],@prime_arr[i + 1]-@prime_arr[i]]%>
+            for(i = 0; i < primes.length; i++){
+                td = document.createElement('td')
+                if (i == 2){
+                    if (primes[2] == 2) {td.classList.add("right");}
+                    else {td.classList.add("wrong");}
+                }
+                td.innerHTML = primes[i]
+                tr.appendChild(td)
+            }
+            table.appendChild(tr)
+        <% end %>
+
+        var table = document.createElement('table')
+        table.setAttribute('id','result_tab')
+        tr = document.createElement('tr')
+        th = document.createElement('th')
+        th.innerHTML = 'Близнецы'
+        th.setAttribute('colspan','2')
+        tr.appendChild(th)
+        table.appendChild(tr)
+
+        doc.appendChild(table)
+
+        <% @result.each do |x| %>
+            var tr = document.createElement('tr')
+            for(j of <%=[x[0],x[1]]%>){
+                td = document.createElement('td')
+                td.innerHTML = j
+                tr.appendChild(td)
+            }
+            table.appendChild(tr)
+        <% end %>
+    <% end %>
+<% end %>

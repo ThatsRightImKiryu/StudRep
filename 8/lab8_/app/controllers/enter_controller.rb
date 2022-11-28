@@ -6,6 +6,21 @@ require 'prime'
 class EnterController < ApplicationController
   def input; end
 
+  def compute
+    @input = params[:inpt]
+    if !/^-?\d+$/.match(@input)
+      flash[:notice] = 'Введено не число'
+    elsif !(@input = @input.to_i).positive?
+      flash[:notice] = 'Введено отрицательное число'
+    else
+      @result = twins(@input)
+      return @prime_arr = (@input..2 * @input).select(&:prime?)
+    end
+    redirect_to :input
+  end
+
+  private
+
   # rubocop:disable Naming/MethodParameterName
   def twins(n)
     arr = []
@@ -18,17 +33,4 @@ class EnterController < ApplicationController
     nil
   end
   # rubocop:enable Naming/MethodParameterName
-
-  def compute
-    @input = params[:inpt]
-    if !/^-?\d+$/.match(@input)
-      flash[:notice] = 'Введено не число'
-    elsif !(@input = @input.to_i).positive?
-      flash[:notice] = 'Введено отрицательное число'
-    else
-      @result = twins(@input)
-      return @prime_arr = (@input..2 * @input).select(&:prime?)
-    end
-    redirect_to '/enter/input'
-  end
 end

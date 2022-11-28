@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 def write_file(path, *words)
-  if words.length <= 20
+  if words.all? { |x| x.length <= 20 }
     File.open(path, 'w') do |file|
       words.each do |s|
         file.puts s

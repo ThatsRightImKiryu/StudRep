@@ -1,0 +1,12 @@
+
+<h1>Введите целое число n > 0</h1>
+
+
+<%= form_with url: "/index/output", id: 'sform',local:false, method: :get do |form| %>
+  <%= form.number_field :inpt, min: '1'%>
+  <%= form.submit id: 'submit_btn',value: "Отправить" %>
+<% end %>
+
+<div id='result'>
+
+</div>

@@ -7,9 +7,8 @@ describe 'Files' do
   context 'Just ordinary test' do
     it 'Should say its okay and print me count' do
       path = 'test1.dot'
-      string = 'first second 12 lol no'
-
-      write_file(path, *string.split(' '))
+      a = [2, 6, 8, 2].map { |x| ('a'..'z').to_a.sample(x).join }
+      write_file(path, *a)
 
       expect(count(read_file(path))).to eq 2
     end
@@ -18,7 +17,6 @@ describe 'Files' do
   context 'Just ordinary test with existed file' do
     it 'Should say its okay and print me count' do
       path = 'test2.dot'
-
       expect(count(read_file(path))).to eq 3
     end
   end
@@ -27,7 +25,7 @@ describe 'Files' do
     it 'Should say its not okay and print me count' do
       path = 'test3.dot'
 
-      string = '1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 8 19 20 21'
+      string = '1 2 3 4 5 6 7 8 9 10 11 1211111111111111111111111 13 14 15 16 17 8 19 20 21'
 
       write_file(path, *string.split(' '))
 

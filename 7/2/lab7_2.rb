@@ -16,7 +16,7 @@ rec.print
 rectprism = RectPrism.new(6, 7, 7)
 
 puts 'Доступ к полям объекта - прямоугольного параллелепипеда'
-p rectprism.a, rectprism.b, rectprism.h\
+p rectprism.a, rectprism.b, rectprism.h
 
 puts 'Объем прямоугольного параллелепипеда'
 p rectprism.volume

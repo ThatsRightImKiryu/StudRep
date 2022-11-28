@@ -4,7 +4,7 @@
   <h2 style = 'color:red'><%=flash[:notice]%></h2>
 
 <%end%>
-<%= form_with url: "/enter/compute", method: :get do |form| %>
+<%= form_with url: :compute, method: :get do |form| %>
   <%= form.number_field :inpt, in:1..Float::INFINITY%>
   <%= form.submit "Отправить" %>
 <% end %>

@@ -1,0 +1,25 @@
+
+function run(){
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function()
+        {
+            if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+            {
+                result = document.getElementById("result")
+                result.innerHTML = xmlhttp.responseText;
+            }
+        }
+    xmlhttp.open('GET', 'http://localhost:3000/index/output?inpt=' + <%=@input%>+'&commit=Отправить', true);
+    xmlhttp.send(null);
+}
+
+run()
+    <% @result.each do |x| %>
+        var tr = document.createElement('tr')
+        for(j of <%=[x[0],x[1],x[1]-x[0]]%>){
+            td = document.createElement('td')
+            td.innerHTML = j
+            tr.appendChild(td)
+        }
+        table.appendChild(tr)
+    <% end %>
