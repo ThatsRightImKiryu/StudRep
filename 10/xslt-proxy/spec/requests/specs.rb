@@ -3,12 +3,12 @@ require 'spec_helper'
 
 RSpec.describe 'Proxy', type: :request do
   describe 'GET /' do
-    it 'Compares two responses with different values' do
-      get '/proxy/input', params: { inpt: rand(1..30), side: 'server' }
-      response1 = response.clone
-      get '/proxy/input', params: { inpt: rand(1..30), side: 'client' }
-      response2 = response.clone
-      get '/proxy/input', params: { inpt: rand(1..30), side: 'client-with-xslt' }
+    it 'Check server response' do
+      { 'server': 'html', 'client': 'xml', 'client-with-xslt': 'xml' }.each do |side, type|
+        get '/proxy/output', params: { inpt: rand(1..30), side: side, commit: 'Отправить' }
+        expect(response).to have_http_status(:success)
+        expect(response.headers['Content-Type']).to include(type)
+      end
     end
   end
 end
