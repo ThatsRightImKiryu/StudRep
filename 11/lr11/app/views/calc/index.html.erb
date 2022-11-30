@@ -1,0 +1,7 @@
+<h3>Ввод данных</h3>
+<%= form_tag("/calc/view", :method => "get") do %>
+  <%= label_tag("Введите n меньше чем 10 в 6-ой степени:" )%> <br/>
+  <%= label_tag(:'Num:') %>
+  <%= text_field_tag(:num) %> <br/>
+  <%= submit_tag(:'View result') %>
+<% end %>

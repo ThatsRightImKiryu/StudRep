@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <td>10-ая с.с.</td>
+    <td>2-ая с.с.</td>
+  </tr>
+  <% @result.each do |row| %>
+    <tr>
+      <% row.each do |value| %>
+        <td>
+          <%= value %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "Repeat calculation", :calc_index %>

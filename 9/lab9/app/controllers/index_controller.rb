@@ -6,6 +6,14 @@ require 'prime'
 class IndexController < ApplicationController
   def input; end
 
+
+  def output
+    @input = params[:inpt]
+    check(@input)
+  end
+
+  private
+
   # rubocop:disable Naming/MethodParameterName
   def twins(n)
     arr = []
@@ -18,13 +26,6 @@ class IndexController < ApplicationController
     nil
   end
   # rubocop:enable Naming/MethodParameterName
-
-  def output
-    @input = params[:inpt]
-    check(@input)
-  end
-
-  private
 
   def check(str)
     if !/^-?\d+$/.match(str)

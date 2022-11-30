@@ -17783,3 +17783,112 @@ Processing by IndexController#output as JS
 Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 574)
 
 
+Started GET "/" for ::1 at 2022-11-29 17:07:18 +0300
+Processing by IndexController#input as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/input.html.erb within layouts/application
+  Rendered index/input.html.erb within layouts/application (Duration: 18.0ms | Allocations: 3044)
+  Rendered layout layouts/application.html.erb (Duration: 124.5ms | Allocations: 20718)
+Completed 200 OK in 152ms (Views: 133.4ms | ActiveRecord: 0.0ms | Allocations: 26612)
+
+
+Started GET "/" for ::1 at 2022-11-29 17:08:13 +0300
+Processing by IndexController#input as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/input.html.erb within layouts/application
+  Rendered index/input.html.erb within layouts/application (Duration: 3.0ms | Allocations: 866)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 2961)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 3323)
+
+
+Started GET "/index/output?inpt=15&commit=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C" for ::1 at 2022-11-29 17:08:24 +0300
+Processing by IndexController#output as JS
+  Parameters: {"inpt"=>"15", "commit"=>"Отправить"}
+  Rendering index/output.js.erb
+  Rendered index/output.js.erb (Duration: 4.6ms | Allocations: 784)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1626)
+
+
+Started GET "/" for ::1 at 2022-11-29 17:08:45 +0300
+Processing by IndexController#input as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/input.html.erb within layouts/application
+  Rendered index/input.html.erb within layouts/application (Duration: 2.5ms | Allocations: 863)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 2979)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 3281)
+
+
+Started GET "/index/output?inpt=15&commit=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C" for ::1 at 2022-11-29 17:08:46 +0300
+Processing by IndexController#output as JS
+  Parameters: {"inpt"=>"15", "commit"=>"Отправить"}
+  Rendering index/output.js.erb
+  Rendered index/output.js.erb (Duration: 1.2ms | Allocations: 195)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 585)
+
+
+Started GET "/" for ::1 at 2022-11-29 17:09:28 +0300
+Processing by IndexController#input as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/input.html.erb within layouts/application
+  Rendered index/input.html.erb within layouts/application (Duration: 2.3ms | Allocations: 808)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 2806)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 3103)
+
+
+Started GET "/index/output?inpt=15&commit=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C" for ::1 at 2022-11-29 17:09:29 +0300
+Processing by IndexController#output as JS
+  Parameters: {"inpt"=>"15", "commit"=>"Отправить"}
+  Rendering index/output.js.erb
+  Rendered index/output.js.erb (Duration: 0.9ms | Allocations: 192)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 585)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-30 08:56:24 +0300
+Processing by IndexController#input as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/input.html.erb within layouts/application
+  Rendered index/input.html.erb within layouts/application (Duration: 15.1ms | Allocations: 3044)
+  Rendered layout layouts/application.html.erb (Duration: 112.3ms | Allocations: 20743)
+Completed 200 OK in 134ms (Views: 118.9ms | ActiveRecord: 0.0ms | Allocations: 26637)
+
+
+Started GET "/index/output?inpt=&commit=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C" for 127.0.0.1 at 2022-11-30 08:56:26 +0300
+Processing by IndexController#output as JS
+  Parameters: {"inpt"=>"", "commit"=>"Отправить"}
+  Rendering index/output.js.erb
+  Rendered index/output.js.erb (Duration: 3.0ms | Allocations: 535)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 1632)
+
+
+Started GET "/index/output?inpt=12&commit=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C" for 127.0.0.1 at 2022-11-30 08:56:27 +0300
+Processing by IndexController#output as JS
+  Parameters: {"inpt"=>"12", "commit"=>"Отправить"}
+  Rendering index/output.js.erb
+  Rendered index/output.js.erb (Duration: 0.8ms | Allocations: 248)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 657)
+
+
+Started GET "/index/output?inpt=12&commit=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C" for 127.0.0.1 at 2022-11-30 08:56:29 +0300
+Processing by IndexController#output as JS
+  Parameters: {"inpt"=>"12", "commit"=>"Отправить"}
+  Rendering index/output.js.erb
+  Rendered index/output.js.erb (Duration: 1.6ms | Allocations: 247)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 641)
+
+
+Started GET "/index/output?inpt=12&commit=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C" for 127.0.0.1 at 2022-11-30 08:56:29 +0300
+Processing by IndexController#output as JS
+  Parameters: {"inpt"=>"12", "commit"=>"Отправить"}
+  Rendering index/output.js.erb
+  Rendered index/output.js.erb (Duration: 1.4ms | Allocations: 263)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 653)
+
+
+Started GET "/index/output?inpt=1215&commit=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C" for 127.0.0.1 at 2022-11-30 08:56:30 +0300
+Processing by IndexController#output as JS
+  Parameters: {"inpt"=>"1215", "commit"=>"Отправить"}
+  Rendering index/output.js.erb
+  Rendered index/output.js.erb (Duration: 3.1ms | Allocations: 1344)
+Completed 200 OK in 11ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 2732)
+
+

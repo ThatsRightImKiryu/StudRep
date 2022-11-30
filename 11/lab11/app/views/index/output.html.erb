@@ -1,0 +1,23 @@
+
+<h2>Вы ввели</h2>
+<p><%=@input%></p>
+
+<%unless @result.nil?%>
+
+
+<h2>Результат</h2>
+  <table>
+  <tr>
+    <td colspan = 2>Числа близнецы</td>
+  </tr>
+  <%@result.each do |i|%>
+    <tr>
+      <td><%=i[0]%></td>
+      <td><%=i[1]%></td>
+    </tr>
+    <%end%>
+</table>
+<%else%><p>Для данного n нет близнецов в диапазоне от n до 2n</p>
+<%end%>
+<br/>
+<%=link_to 'Вернуться','input'%>
