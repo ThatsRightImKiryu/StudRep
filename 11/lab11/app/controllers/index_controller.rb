@@ -20,11 +20,13 @@ class IndexController < ApplicationController
     end
   end
 
-  def show_db
-    render xml: Twin.all # Для отрисовки в views/layouts/application.html.erb добавили <html data-turbo:false>
-  end
-
   private
+
+  def show_db
+    # Задание с сериализацией
+    # Для отрисовки в views/layouts/application.html.erb добавили <html data-turbo:false>
+    render xml: Twin.all
+  end
 
   def check
     return flash[:notice] = 'Введено не число' unless /^-?\d+$/.match(@input)
