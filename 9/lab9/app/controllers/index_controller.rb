@@ -12,7 +12,6 @@ class IndexController < ApplicationController
     check(@input)
   end
 
-  private
 
   # rubocop:disable Naming/MethodParameterName
   def twins(n)

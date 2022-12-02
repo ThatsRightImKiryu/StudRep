@@ -1,5 +1,5 @@
 require 'selenium-webdriver'
-
+require 'spec_helper'
 include RSpec::Expectations
 describe 'View' do
   before(:each) do
@@ -10,7 +10,7 @@ describe 'View' do
   end
   after(:each) do
     @driver.quit
-    @verification_errors.should == []
+    expect(@verification_errors).to be_empty
   end
   def verify
     yield
@@ -22,6 +22,6 @@ describe 'View' do
     @driver.find_element(:id, 'inpt').clear
     @driver.find_element(:id, 'inpt').send_keys '14'
     @driver.find_element(:id, 'submit_btn').click
-    verify { @driver.find_element(:xpath, '//*[@id="result_tab"]//tr[2]').text.should == '17 19' }
+    verify { expect(@driver.find_element(:xpath, '//*[@id="result_tab"]//tr[2]').text).to eq('17 19') }
   end
 end
