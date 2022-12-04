@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_29_163030) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_03_124028) do
   create_table "twins", force: :cascade do |t|
     t.integer "input", null: false
     t.string "twins", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["input"], name: "index_twins_on_input", unique: true
   end
 
 end

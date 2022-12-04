@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+body{
+    background-color: cornsilk;
+}
+ h1, h2, h3, h4, h5, h6, p{
+    color: firebrick
+}
+
+table, td, tr, th{
+    border:2px solid peachpuff;
+    color:sienna
+}
