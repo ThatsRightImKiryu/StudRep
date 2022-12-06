@@ -21,7 +21,7 @@ class IndexController < ApplicationController
 
   def show_db
     # Задание с сериализацией
-    # Для отрисовки в views/layouts/application.html.erb добавили <html data-turbo:false>
+    # Для отрисовки в views/layouts/application.html.erb добавили <html data-turbo='false'>
     render xml: Twin.all
   end
 end

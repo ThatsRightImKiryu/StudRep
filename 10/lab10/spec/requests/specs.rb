@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'spec_helper'
+#require 'spec_helper'
 
 RSpec.describe 'Xml', type: :request do
 

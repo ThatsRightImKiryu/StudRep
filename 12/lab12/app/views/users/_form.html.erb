@@ -1,11 +1,12 @@
 <%= form_with(model: user) do |form| %>
   <% if user.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2>Пользователь не был создан:</h2>
 
       <ul>
         <% user.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+        <% p error%>
+          <li><%= error.full_message%></li>
         <% end %>
       </ul>
     </div>
@@ -18,10 +19,15 @@
 
   <div>
     <%= form.label :password, value: 'Пароль', style: "display: block" %>
-    <%= form.text_field :password %>
+    <%= form.password_field :password %>
   </div>
 
   <div>
-    <%= form.submit 'Создать' %>
+    <%= form.label :lbl, value: 'Подтвердите пароль', style: "display: block" %>
+    <%= form.password_field :password_confirmation %>
+  </div>
+
+  <div>
+    <%= form.submit 'Создать', id: 'submit-btn'%>
   </div>
 <% end %>

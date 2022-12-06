@@ -3,7 +3,7 @@
 # Docs
 class Twin < ApplicationRecord
   validates_uniqueness_of :input, :twins, message: 'Введено не уникальное значение'
-  validates :input, format: { with: /\A\d+\z/, message: 'Должно быть введено положительное число'}
+  validates :input, format: { with: /\A\d+\z/, message: 'Должно быть введено положительное число' }
   before_save :set_twins
 
   def decoded_twins

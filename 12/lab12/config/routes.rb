@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
-  get 'index/input'
-  get 'index/output'
-  get 'session/login'
-  get 'session/create'
-  get 'session/logout'
   get 'index/output', as: 'output'
   post 'session/login'
+  get 'session/logout'
+  get 'session/login'
   post 'session/create'
-  post 'session/logout'
 
   root 'index#input'
   resources :users

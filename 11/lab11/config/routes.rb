@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'index/input', as: 'input'
   root 'index#input'
   get 'index/output', as: 'output'
   get '/index/show_db', as: 'show_db'
