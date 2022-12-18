@@ -6,12 +6,10 @@ require 'prime'
 class IndexController < ApplicationController
   def input; end
 
-
   def output
     @input = params[:inpt]
     check(@input)
   end
-
 
   # rubocop:disable Naming/MethodParameterName
   def twins(n)
