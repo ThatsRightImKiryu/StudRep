@@ -2,7 +2,7 @@
 
 require_relative 'lab7_1_func'
 require 'rspec'
-# rubocop:disable Metric/BlockLength
+# rubocop:disable Metrics/BlockLength
 describe 'Files' do
   context 'Just ordinary test' do
     it 'Should say its okay and print me count' do
@@ -46,4 +46,4 @@ describe 'Files' do
   end
 end
 
-# rubocop:enable Metric/BlockLength
+# rubocop:enable Metrics/BlockLength

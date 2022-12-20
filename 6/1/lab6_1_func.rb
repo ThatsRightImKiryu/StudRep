@@ -13,7 +13,7 @@ def compute(hip, count, border)
   i1
 end
 
-def integral(n, eps, a = 1.0, b = 2.0)
+def integral(eps, n = 1, a = 1.0, b = 2.0)
   i1 = 1
   i2 = 0
   while i1 - i2 > eps

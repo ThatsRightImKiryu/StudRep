@@ -32,7 +32,7 @@ describe Rectangle do
   end
 end
 
-# rubocop:disable Metric/BlockLength
+# rubocop:disable Metrics/BlockLength
 describe RectPrism do
   before :each do
     @rectprism = RectPrism.new
@@ -70,4 +70,4 @@ describe RectPrism do
     end
   end
 end
-# rubocop:enable Metric/BlockLength
+# rubocop:enable Metrics/BlockLength

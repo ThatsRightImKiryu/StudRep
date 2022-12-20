@@ -23,12 +23,11 @@ class SessionController < ApplicationController
       sign_in user # Наш метод входа, описанный в хелпере
       redirect_to root_url
     else
-      if user.nil?
-        flash[:notice] = 'Неправильный логин'
-      else
-        flash[:notice] = 'Неправильный пароль'
-      end
-      p flash[:notice]
+      flash[:notice] = if user.nil?
+                         I18n.t(:invalid_login)
+                       else
+                         I18n.t(:invalid_password)
+                       end
       redirect_to session_login_url
     end
   end

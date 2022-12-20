@@ -1,1 +1,0 @@
-correct_strings("popmusicisgood incorrectsymbols()&&&isnotgood '\' -")[1]

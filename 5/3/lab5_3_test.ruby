@@ -27,12 +27,12 @@ class TestFunc < Minitest::Test
   #     3)У слова с пятым индексом стоит слово с цифрой в начале
   #     В итоге, получается 5 исправлений, одно из которых это замена первого символа-числа на "_"
   #     Пример: 'a`dw mkfdkl nvfe c!we poi 1mkgdf lk$j ngh fds qw&e'
-  
+
   def setup
     @string = ''
   end
 
-  def test_random 
+  def test_random
     checked_string = ''
 
     10.times do |i|
